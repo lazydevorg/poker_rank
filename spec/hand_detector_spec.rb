@@ -134,7 +134,7 @@ module PokerRank
       expect do
         hand = HandDetector.get_hand_from_cards cards
       end.not_to raise_error
-      expect(hand).to be_nil
+      expect(hand).to be_a HighCard
     end
   end
 end

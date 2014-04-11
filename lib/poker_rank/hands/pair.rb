@@ -1,6 +1,7 @@
 module PokerRank
   class Pair < CardsManager
     PRIORITY = 1
+    attr_accessor :other_cards
 
     def initialize(cards_pair)
       super cards_pair
@@ -10,8 +11,24 @@ module PokerRank
     def self.new_from_hand(cards)
       manager = CardsManager.new cards
       groups = manager.groups_by_value_with_length 2
-      return self.new(groups[0]) if groups.length > 0
+      pair_cards = groups[0]
+      if groups.length > 0
+        pair = self.new(pair_cards)
+        pair.other_cards = cards - pair_cards
+        return pair
+      end
       raise CardsManager::CardsError.new('Cards not valids')
+    end
+
+    def <=>(pair)
+      comparation = @cards <=> pair.cards
+      if comparation == 0
+        comparation = second_pair <=> two_pairs.rank
+        if comparation == 0
+          comparation = @last_card <=> two_pairs.last_card
+        end
+      end
+      return comparation
     end
 
     protected

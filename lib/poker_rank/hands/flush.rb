@@ -15,6 +15,10 @@ module PokerRank
       new cards
     end
 
+    def <=>(other)
+      HighCard.compare_hands @cards.sort, other.cards.sort
+    end
+
     protected
 
     def check_cards

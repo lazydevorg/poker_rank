@@ -8,7 +8,8 @@ module PokerRank
         Straight,
         ThreeOfKind,
         TwoPairs,
-        Pair
+        Pair,
+        HighCard,
     ]
 
     def self.get_hand_from_cards(cards)
