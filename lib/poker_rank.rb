@@ -9,3 +9,6 @@ require "poker_rank/hands/flush"
 require "poker_rank/hands/full_house"
 require "poker_rank/hands/four_of_kind"
 require "poker_rank/hands/straight_flush"
+require "poker_rank/hand_detector"
+
+# Main module

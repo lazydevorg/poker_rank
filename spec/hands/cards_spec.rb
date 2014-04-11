@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe CardsManager do
   it 'calculate correct rank' do
     cards = CardsManager.new([

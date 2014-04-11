@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Pair do
   context 'with valid data' do
     it 'accepts two cards' do

@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe FourOfKind do
   context 'with valid data' do
     let(:cards) {

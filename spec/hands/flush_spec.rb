@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe Flush do
   context 'with valid data' do
     let(:cards) {

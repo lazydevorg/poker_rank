@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe FullHouse do
   context 'with valid data' do
     let(:three_of_kind) {

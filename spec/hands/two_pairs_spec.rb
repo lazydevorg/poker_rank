@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe TwoPairs do
   context 'with valid data' do
     it 'accepts two pairs' do

@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe ThreeOfKind do
   context 'with valid data' do
     it 'accepts three cards' do
