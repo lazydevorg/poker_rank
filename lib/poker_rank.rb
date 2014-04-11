@@ -12,3 +12,5 @@ require "poker_rank/hands/straight_flush"
 require "poker_rank/hand_detector"
 
 # Main module
+module PokerRank
+end
