@@ -12,7 +12,7 @@ module PokerRank
       ]
       hand2 = [
           Card.new('2', :D),
-          Card.new('6', :H),
+          Card.new('2', :H),
           Card.new('4', :D),
           Card.new('5', :C),
           Card.new('T', :D)

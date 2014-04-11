@@ -6,8 +6,8 @@ module PokerRank
     end
 
     def compare_cards
-      hand1 = HandDetector.get_hand_from_cards @cards2
-      hand2 = HandDetector.get_hand_from_cards @cards1
+      hand1 = HandDetector.get_hand_from_cards @cards1
+      hand2 = HandDetector.get_hand_from_cards @cards2
       comparation = hand1.class::PRIORITY <=> hand2.class::PRIORITY
       if comparation == 0
         comparation = hand1 <=> hand2
