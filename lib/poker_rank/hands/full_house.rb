@@ -9,6 +9,13 @@ class FullHouse
     @pair = pair
   end
 
+  def self.new_from_hand(cards)
+    three_of_kind = ThreeOfKind.new_from_hand cards
+    cards -= three_of_kind.cards
+    pair = Pair.new_from_hand cards
+    return self.new three_of_kind, pair
+  end
+
   def rank
     @three_of_kind.rank
   end

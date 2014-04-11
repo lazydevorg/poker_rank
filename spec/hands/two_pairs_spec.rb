@@ -26,6 +26,17 @@ describe TwoPairs do
       two_pairs = TwoPairs.new [pair1, pair2]
       expect(two_pairs.rank).to be == 20
     end
+
+    it 'detects itself correctly' do
+      cards = [
+          Card.new('2', :D),
+          Card.new('2', :H),
+          Card.new('3', :S),
+          Card.new('3', :C),
+          Card.new('T', :C)
+      ]
+      expect{TwoPairs.new_from_hand(cards)}.not_to raise_error
+    end
   end
 
   context 'with not valid data' do
@@ -55,6 +66,17 @@ describe TwoPairs do
       expect do
         TwoPairs.new [pair1, pair2, pair3]
       end.to raise_error
+    end
+
+    it 'not detects itself correctly' do
+      cards = [
+          Card.new('2', :D),
+          Card.new('2', :H),
+          Card.new('4', :S),
+          Card.new('3', :C),
+          Card.new('T', :C)
+      ]
+      expect{TwoPairs.new_from_hand(cards)}.to raise_error
     end
   end
 end

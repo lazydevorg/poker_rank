@@ -18,7 +18,7 @@ describe CardsManager do
           Card.new('2', :H),
           Card.new('5', :H)
       ])
-    expect(cards.are_same_suit?).to be_true
+    expect(cards.are_all_same_suit?).to be_true
   end
 
   it 'detect not same suit' do
@@ -26,6 +26,6 @@ describe CardsManager do
           Card.new('2', :H),
           Card.new('5', :D)
       ])
-    expect(cards.are_same_suit?).to be_false
+    expect(cards.are_all_same_suit?).to be_false
   end
 end

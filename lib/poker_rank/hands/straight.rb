@@ -6,6 +6,10 @@ class Straight < CardsManager
     check_cards
   end
 
+  def self.new_from_hand(cards)
+    new cards
+  end
+
   def rank
     @cards.max.rank
   end

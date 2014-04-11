@@ -9,6 +9,13 @@ class TwoPairs
     check_pairs
   end
 
+  def self.new_from_hand(cards)
+    pair1 = Pair.new_from_hand cards
+    cards -= pair1.cards
+    pair2 = Pair.new_from_hand cards
+    return self.new [pair1, pair2]
+  end
+
   def rank
     @pairs.max.rank
   end
