@@ -4,4 +4,4 @@ require "rspec/core/rake_task"
 RSpec::Core::RakeTask.new
 
 desc "Run tests"
-task :test => :spec
+task :default => :spec
