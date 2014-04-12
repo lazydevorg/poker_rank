@@ -5,4 +5,5 @@ gemspec
 
 group :test do
   gem 'rake'
+  gem 'codeclimate-test-reporter', group: :test, require: nil
 end
