@@ -1,5 +1,7 @@
 # PokerRank Calculator
 
+[![Build Status](https://travis-ci.org/lazydevorg/poker_rate.svg?branch=master)](https://travis-ci.org/lazydevorg/poker_rate)
+
 ## Installation
 
 Add this line to your application's Gemfile:
